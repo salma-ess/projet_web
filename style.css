@@ -1,0 +1,552 @@
+/* --- Style général --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+background-image: url(back.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+    color: white;
+    overflow-x: hidden; /* empêche le scroll horizontal à cause des animations */
+}
+
+/* --- Header --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: black;
+}
+
+/* Logo */
+.logo-img {
+    height: 100px;
+    width: auto;
+}
+
+/* Navigation */
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #ff6347;
+}
+
+/* --- Section principale / Hero --- */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 50px;
+    background-color: black;
+    color: white;
+}
+
+/* Texte à gauche avec animation fade-in */
+.hero-text {
+    max-width: 500px;
+    margin-right: 50px;
+    opacity: 0;
+    animation: fadeInLeft 1.5s forwards;
+    margin-bottom: 30px;
+}
+
+/* Titre et paragraphe */
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: yellow;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Bouton avec effet hover */
+.hero-text .btn {
+    padding: 15px 30px;
+    
+   background-color: #e5533c;
+   color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.hero-text .btn:hover {
+    color: #e5533c;
+    background-color:yellow ;
+    transform: scale(1.05); /* léger zoom au survol */
+}
+
+/* Container pour les deux images */
+.hero-image {
+    display: flex;          /* images côte à côte */
+    gap: 20px;              /* espace entre les images */
+    opacity: 0;
+    animation: fadeInRight 1.5s forwards;
+}
+
+/* Images individuelles */
+.hero-images img {
+    width: 250px;           /* taille des images, tu peux ajuster */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* --- Animations keyframes --- */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+/* Section Ingrédients */
+.ingredients {
+    background-color: #000000; /* sombre */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 50px;
+}
+
+/* Titre et paragraphe */
+.ingredients h2 {
+    font-size: 32px;
+    color: #ff6347;
+    margin-bottom: 15px;
+    animation: fadeInDown 1.2s forwards;
+}
+.ingredients p {
+    font-size: 18px;
+    max-width: 700px;
+    margin-bottom: 30px;
+    color: yellow;
+    animation: fadeInUp 1.5s forwards;
+}
+
+/* Container des images */
+.ingredients-images {
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Images individuelles */
+.ingredients-images img {
+    width: 350px;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.5s; /* transition douce pour zoom */
+    animation: pulse 6s infinite;
+}
+
+/* Définir le délai pour chaque image pour qu’elles s’agrandissent à tour de rôle */
+.ingredients-images img:nth-child(1) { animation-delay: 0s; }
+.ingredients-images img:nth-child(2) { animation-delay: 2s; }
+.ingredients-images img:nth-child(3) { animation-delay: 4s; }
+
+/* Animations du texte */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animation pour images : zoom léger */
+@keyframes pulse {
+    0%, 33%, 100% { transform: scale(1); }
+    16% { transform: scale(1.1); } /* une image devient légèrement plus grande */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Section Chefs */
+.chefs {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 60px 50px;
+}
+
+.chefs h2 {
+    font-size: 32px;
+    color: #ff6347;
+    margin-bottom: 15px;
+    animation: fadeInDown 1.2s forwards;
+}
+
+.chefs p {
+    font-size: 18px;
+    color: yellow;
+    margin-bottom: 40px;
+    animation: fadeInUp 1.5s forwards;
+}
+
+/* Container des cartes des chefs */
+.chefs-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Carte individuelle */
+.chef-card {
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+/* Zoom léger à l'apparition */
+.chef-card img {
+    width: 100%;
+    border-radius: 50%; /* cercle par défaut */
+    transition: all 0.4s;
+}
+
+/* Social links invisibles par défaut */
+.social-links {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Conteneur image relatif pour placer social links */
+.chef-image {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Survol de la carte */
+.chef-card:hover img {
+    border-radius: 10px; /* rectangle arrondi */
+    transform: scale(1.05); /* léger zoom */
+}
+
+.chef-card:hover .social-links {
+    opacity: 1;
+}
+
+/* Social icons */
+.social-links img {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+
+
+/* ====== Section Clients ====== */
+.clients {
+    background-color: #000000; /* sombre */
+    color: white;
+    text-align: center;
+    padding: 60px 50px;
+}
+
+.clients h2 {
+    font-size: 32px;
+    color:#ff6347;
+    margin-bottom: 15px;
+    animation: fadeInDown 1s forwards;
+}
+
+.clients h3 {
+   
+    color:yellow;
+    
+}
+
+
+.clients p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: rgb(255, 255, 255);
+    animation: fadeInUp 1s forwards;
+}
+
+/* Container des avis */
+.clients-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Cartes individuelles */
+.client-card {
+    background-color: #292626;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+
+/* Délai pour que les avis apparaissent l’un après l’autre */
+.client-card:nth-child(1) { animation-delay: 0s; }
+.client-card:nth-child(2) { animation-delay: 0.5s; }
+.client-card:nth-child(3) { animation-delay: 1s; }
+
+.client-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+/* Hover pour léger zoom */
+.client-card:hover {
+    transform: scale(1.05);
+}
+
+/* Réutilisation des keyframes existants */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+/* Section Contact */
+.contact {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 60px 50px;
+}
+
+.contact h2 {
+    font-size: 32px;
+    color: #ff6347;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: yellow;
+}
+
+/* Formulaire centré */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto 40px auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: yellow;
+    color: #e5533c;
+}
+
+/* Coordonnées sous le formulaire */
+.contact-info {
+    margin-top: 20px;
+    font-size: 16px;
+    color: white;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px 20px 20px 20px;
+    text-align: center;
+    width: 20;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.footer-social img:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: gray;
+}
+
+
+
+
+
+/* Hero spécial similaire à la page d'accueil */
+.special-hero, .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 50px;
+    background-color: black;
+    color: white;
+    gap: 50px; /* espace entre texte et image */
+    flex-wrap: wrap; /* pour mobile, texte et image se mettent verticalement */
+}
+
+/* Texte à gauche avec animation */
+.hero-text {
+    max-width: 500px;
+    opacity: 0;
+    animation: fadeInLeft 1.5s forwards;
+}
+
+/* Titre et paragraphe */
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: yellow;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Image à droite avec animation */
+.hero-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeInRight 1.5s forwards;
+}
+
+/* Animations keyframes déjà présentes */
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
