@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style2.css">
+    <style>
+        /* ===== SECTION PRINCIPALE ===== */
+        .steps-section {
+            background-color: #000;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .steps-section h4 {
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .steps-section h2 {
+            color: #fff;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 60px;
+        }
+
+        /* ===== CONTENEUR DES ÉTAPES ===== */
+        .steps-container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* ===== BOX D’ÉTAPE ===== */
+        .step-box {
+            background-color: #0d0d0d;
+            border: 2px solid #d4af37;
+            border-radius: 10px;
+            padding: 60px 30px 40px 30px;
+            flex: 1;
+            max-width: 320px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .step-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+        }
+
+        /* ===== ICÔNES ===== */
+        .step-box .icon {
+            background-color: #d4af37;
+            color: #000;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            position: absolute;
+            top: -45px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        }
+
+        /* ===== TITRES ET TEXTE ===== */
+        .step-box h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            margin-top: 60px;
+            margin-bottom: 15px;
+        }
+
+        .step-box p {
+            font-size: 15px;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .reservation-card {
+            max-width: 450px;
+            margin: 60px auto;
+            background-color: #e4cda9;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(155, 152, 152, 0.1);
+            padding: 30px 40px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .reservation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .formRes {
+            max-width: 400px;
+            margin: 20px auto;
+            padding-bottom: 50px;
+            padding-left: 200px;
+            padding-right: 200px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #020202;
+            font-family: Arial, sans-serif;
+        }
+
+        .formRes h2 {
+            text-align: center;
+            color: #f9f5f5;
+            margin-bottom: 20px;
+        }
+
+        .formRes label {
+            display: block;
+            margin-bottom: 6px;
+            color: #c67710;
+            font-size: 14px;
+        }
+
+        .formRes input,
+        .formRes select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .formRes input:focus,
+        .formRes select:focus {
+            border-color: #999;
+            outline: none;
+        }
+
+        .formRes button {
+            width: 100%;
+            background-color: #d4af37;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .formRes button:hover {
+            background-color: #b8962e;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo restaurant" width="100PX" height="100PX">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="special.html">Spécial</a></li>
+                <li><a href="Reservation.html" class="active">Réservation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="reservation">
+        <h2 style="margin-top: 150PX; ;">Réservation de table</h2>
+        <p style="font-weight: bold;font-size: large;">Veuillez remplir le formulaire ci-dessous pour réserver une table
+            dans notre
+            restaurant.</p>
+    </div>
+
+    <div>
+        <section class="steps-section">
+            <h4>Processus</h4>
+            <h2>3 étapes faciles</h2>
+
+            <div class="steps-container">
+                <!-- Étape 1 -->
+                <div class="step-box">
+                    <div class="icon"><i class="fa-solid fa-calendar-check"></i></div>
+                    <h3>Remplissez le formulaire</h3>
+                    <p>Indiquez vos informations de contact, la date, l’heure et le nombre de personnes pour votre
+                        réservation.</p>
+                </div>
+
+                <!-- Étape 2 -->
+                <div class="step-box">
+                    <div class="icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                    <h3>Confirmez votre réservation</h3>
+                    <p>Vous recevrez une confirmation par email ou téléphone pour valider votre demande de réservation.
+                    </p>
+                </div>
+
+                <!-- Étape 3 -->
+                <div class="step-box">
+                    <div class="icon"><i class="fa-solid fa-chair"></i></div>
+                    <h3>Profitez de votre expérience</h3>
+                    <p>Venez savourer votre repas dans une ambiance agréable et profitez d’un moment unique à votre
+                        table réservée.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <form class="formRes">
+            <h2 style="text-align: center;">Réservation de table</h2>
+
+            <label for="name">Nom complet *</label>
+            <input type="text" id="name" name="name" placeholder="Entrez votre nom complet" required><br>
+
+            <label for="phone">Téléphone *</label>
+            <input type="tel" id="phone" name="phone" placeholder="06 00 00 00 00" required>
+
+            <label for="email">Adresse e-mail *</label>
+            <input type="email" id="email" name="email" placeholder="exemple@mail.com" required><br>
+
+            <label for="date">Date de réservation *</label>
+            <input type="date" id="date" name="date" required><br>
+
+            <label for="time">Heure *</label>
+            <input type="time" id="time" name="time" required><br>
+
+            <label for="guests">Nombre de personnes *</label>
+            <input type="number" id="guests" name="guests" min="1" max="20" placeholder="Ex: 4" required><br>
+
+            <label for="table">Préférence de table</label>
+            <select id="table" name="table">
+                <option value="">Aucune préférence</option>
+                <option value="inside">À l’intérieur</option>
+                <option value="terrace">En terrasse</option>
+                <option value="window">Près de la fenêtre</option>
+            </select><br>
+
+            <label for="occasion">Occasion spéciale</label>
+            <input type="text" id="occasion" name="occasion" placeholder="Anniversaire, dîner romantique…"><br>
+
+            <button type="submit">Confirmer la réservation</button><br>
+        </form>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,341 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #111;
+    color: #f0f0f0;
+    line-height: 1.7;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000;
+    /* fond sombre */
+    padding: 10px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Logo --- */
+.logo-img {
+    height: 70px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.1);
+}
+
+/* --- Navigation --- */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+/* --- Liens du menu --- */
+nav ul li a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* --- Effet hover --- */
+nav ul li a:hover {
+    color: #d4af37;
+    /* doré */
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* --- Lien actif --- */
+nav ul li a.active {
+    color: #d4af37;
+    border-bottom: 2px solid #d4af37;
+}
+
+#about {
+    position: relative;
+    background: url("images/image2.jpeg") center center / cover no-repeat;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 100px;
+    min-height: 100vh;
+}
+
+#about::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.68);
+}
+
+.about-text,
+.about-image {
+    position: relative;
+    z-index: 2;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.about-text h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.about-image img {
+    width: 540px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.6s ease, box-shadow 0.4s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+}
+
+
+.why-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: #523810;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    /* chaque carte prend environ 1/3 de la largeur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px #d4af37;
+}
+
+.card span {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4e1602;
+    margin-bottom: 10px;
+}
+
+.card h4 {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.card p {
+    color: #cecdcd;
+    font-size: 14px;
+}
+
+
+#specials {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Titre principal */
+h2 {
+    font-size: 30px;
+    color: #d4af37;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+#specials .section-title p {
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* ===== CONTENEUR PRINCIPAL ===== */
+.specials-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== MENU À GAUCHE ===== */
+.specials-menu {
+    flex: 1;
+    max-width: 250px;
+    background-color: #0d0d0d;
+    border-right: 2px solid #d4af37;
+}
+
+.specials-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.specials-menu li {
+    padding: 18px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    border-bottom: 1px solid #222;
+    transition: all 0.3s ease;
+}
+
+.specials-menu li:hover {
+    background-color: #333;
+    color: #d4af37;
+}
+
+.specials-menu li.active {
+    background-color: #d4af37;
+    color: #000;
+    font-weight: 600;
+}
+
+/* ===== DÉTAILS À DROITE ===== */
+.specials-details {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    color: #ddd;
+}
+
+.tab-content {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.tab-content.active {
+    display: flex;
+}
+
+/* Texte du contenu */
+.details-text h3 {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.details-text .italic {
+    font-style: italic;
+    color: #aaa;
+    margin-bottom: 15px;
+    display: block;
+}
+
+
+/* Image */
+.details-image img {
+    width: 380px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* ======= Galerie ======= */
+#gallery {
+    padding: 50px 0;
+    background-color: #111;
+    /* fond sombre pour effet élégant */
+    color: #fff;
+    text-align: center;
+}
+
+#gallery h2 {
+    font-size: 2em;
+    color: #d4af37;
+    /* doré */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#gallery .section-title p {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* Conteneur des images */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* permet de passer à la ligne sur petit écran */
+    justify-content: center;
+    gap: 15px;
+    /* espace entre les images */
+    padding: 0 20px;
+}
+
+/* Chaque image */
+.gallery-item {
+    flex: 1 1 calc(25% - 15px);
+    /* 4 images par ligne */
+    max-width: calc(25% - 15px);
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Effet zoom au survol */
+.gallery-item:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.reservation {
+    background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(images/plat2.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 60px 120px;
+    color: #fff;
+    text-align: center;
+    height: 400px;
+    position: relative;
+}

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Histoire</title>
+    <link rel="stylesheet" href="Style2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        .gold-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .gold-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        .gold-list i {
+            color: #d4af37;
+
+        }
+
+        /* Effet hover : brillance dorée */
+        .gold-list i:hover {
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo restaurant" width="100PX" height="100PX">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="about.html" class="active">À propos</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="special.html">Spécial</a></li>
+                <li><a href="Reservation.html">Réservation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+        <div class="about-text">
+            <h2 style="color: #d4af37; text-align: center;">Notre Histoire et Notre Philosophie</h2>
+            <p><i>L’Essence du Goût</i> a vu le jour avec une mission claire : redéfinir l’expérience culinaire en
+                alliant
+                tradition et modernité.
+                Notre établissement, fondé avec passion, est un hommage aux saveurs authentiques et à la créativité
+                gastronomique.</p>
+
+            <p>Chez <i>L’Essence du Goût</i>, chaque plat est le fruit d’une sélection minutieuse des meilleurs produits
+                locaux et d’une maîtrise des techniques modernes de cuisine.
+                Nous croyons que la qualité commence par la fraîcheur et le respect des ingrédients, afin de sublimer
+                chaque repas.</p>
+
+            <ul class="gold-list">
+                <li><i class="bi bi-check-circle"></i> Une équipe dévouée composée de chefs expérimentés et passionnés.
+                </li>
+                <li><i class="bi bi-check-circle"></i> Des recettes inspirées par la richesse culinaire marocaine et
+                    enrichies de saveurs internationales.</li>
+                <li><i class="bi bi-check-circle"></i> Un cadre chaleureux et raffiné pour des moments de partage
+                    uniques.</li>
+            </ul>
+
+
+            <p>Notre philosophie repose sur une idée simple : offrir une cuisine d’exception, accessible à tous.
+                <i>L’Essence du Goût</i>, c’est bien plus qu’un restaurant – c’est une expérience où chaque détail est
+                pensé
+                pour vous faire voyager et savourer l’instant.
+            </p>
+        </div>
+
+        <div class="about-image">
+            <img src="images/about.jpg" alt="Entrée du restaurant">
+        </div>
+    </section>
+
+    <section id="why-us" class="why-us">
+        <div class="container">
+            <div class="section-title">
+                <h4>POURQUOI NOUS ?______________</h4>
+                <h2 style="color: #d4af37; text-align: center;">Pourquoi choisir <span><i>L’Essence du Goût</i></span> ?
+                </h2>
+            </div>
+
+            <div class="why-content">
+                <div class="card">
+                    <span>01</span>
+                    <h4><i>Une cuisine raffinée</i></h4>
+                    <p>Chez <i>L’Essence du Goût</i>, nous transformons les ingrédients simples en créations culinaires
+                        exceptionnelles.</p>
+                </div>
+
+                <div class="card">
+                    <span>02</span>
+                    <h4><i>Élégance chaleureuse</i></h4>
+                    <p>Une élégance raffinée, un confort absolu et une convivialité sincère, pensés spécialement pour
+                        vous.</p>
+                </div>
+
+                <div class="card">
+                    <span>03</span>
+                    <h4><i>Un service irréprochable</i></h4>
+                    <p>Notre équipe est dédiée à surpasser vos attentes, avec un service rapide et attentif.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="specials">
+        <div class="specials-container">
+
+            <div class="section-title">
+                <h2 style="color: #d4af37; text-align: center;">Offres Spéciales</h2>
+                <h3 style="text-align: center;">Découvrez nos offres spéciales et promotions du jour au restaurant</h3>
+            </div>
+
+            <div class="specials-content">
+                <div class="specials-menu">
+                    <ul>
+                        <li class="active">Menu du Jour</li>
+                        <li>Réduction Vendredi</li>
+                        <li>Offre Week-end</li>
+                    </ul>
+                </div>
+
+                <div class="specials-details">
+                    <!-- TAB 1 -->
+                    <div class="tab-content active" id="tab-1">
+                        <div class="details-text">
+                            <h3>Menu du Jour</h3>
+                            <p class="italic">Un menu complet avec entrée, plat et dessert à un prix exceptionnel</p>
+                            <p>Le menu du jour comprend une entrée savoureuse, un plat principal copieux et un dessert
+                                délicieux, le tout pour seulement 500 MAD. Une offre parfaite pour votre déjeuner à prix
+                                abordable.</p>
+                        </div>
+                        <div class="details-image">
+                            <img src="images/plat1.jpeg" alt="Menu du Jour">
+                        </div>
+                    </div>
+
+                    <!-- TAB 2 -->
+                    <div class="tab-content" id="tab-2">
+                        <div class="details-text">
+                            <h3>Réduction Vendredi</h3>
+                            <p class="italic">Le couscous à prix réduit chaque vendredi</p>
+                            <p>Profitez de notre offre exceptionnelle chaque vendredi : le couscous est à moitié prix !
+                                Un plat traditionnel marocain à partager, maintenant à 250 MAD au lieu de 400 MAD. Une
+                                occasion à ne pas manquer !</p>
+                        </div>
+                        <div class="details-image">
+                            <img src="images/plat2.jpeg" alt="Réduction Vendredi">
+                        </div>
+                    </div>
+
+                    <!-- TAB 3 -->
+                    <div class="tab-content" id="tab-3">
+                        <div class="details-text">
+                            <h3>Offre Week-end</h3>
+                            <p class="italic">Des promotions exceptionnelles pour le week-end</p>
+                            <p>Ce week-end, bénéficiez de 20% de réduction sur tous les plats du menu à emporter. Vous
+                                pouvez emporter vos plats préférés pour savourer à la maison ou au bureau, tout en
+                                profitant de réductions intéressantes.</p>
+                        </div>
+                        <div class="details-image">
+                            <img src="images/plat3.jpeg" alt="Offre Week-end">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="gallery">
+        <div class="section-title">
+            <h2>Galerie</h2>
+            <h3 style="text-align: center;">Moments capturés dans notre restaurant</h3>
+        </div>
+
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <a href="images/galerie1.jpg">
+                    <img src="images/galerie1.jpg" alt="Galerie 1">
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="images/galerie2.jpg">
+                    <img src="images/galerie2.jpg" alt="Galerie 2">
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="images/galerie3.jpg">
+                    <img src="images/galerie3.jpg" alt="Galerie 3">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="images/galerie4.jpg">
+                    <img src="images/galerie4.jpg" alt="Galerie 4">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="images/galerie7.jpg">
+                    <img src="images/galerie7.jpg" alt="Galerie 7">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="images/galerie6.jpg">
+                    <img src="images/galerie6.jpg" alt="Galerie 3">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="images/galerie5.jpg">
+                    <img src="images/galerie5.jpg" alt="Galerie 5">
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="images/galerie9.jpg">
+                    <img src="images/galerie9.jpg" alt="Galerie 9">
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="images/galerie10.jpg">
+                    <img src="images/galerie10.jpg" alt="galerie10">
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="images/galerie8.jpg">
+                    <img src="images/galerie8.jpg" alt="Galerie 8">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="images/galerie11.jpg">
+                    <img src="images/galerie11.jpg" alt="Galerie 1">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="images/galerie12.jpg">
+                    <img src="images/galerie12.jpg" alt="Galerie 1">
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <!-- ======= Fin Galerie ======= -->
+    <footer>
+        <div>
+            <div>
+                <img src="images/logo.png" alt="Logo">
+                <p>Découvrez <strong>L’Essence du Goût</strong> – une expérience culinaire unique où chaque plat raconte
+                    une histoire. 🍽️</p>
+            </div>
+
+            <div>
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="reservation.html">Réservation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+
+
+            <div>
+                <h3>Suivez-nous</h3>
+                <div>
+                    <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="tiktok.png" alt="TikTok"></a>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <p>© 2025 L’Essence du Goût — Tous droits réservés.</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
