@@ -3,51 +3,21 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-background-image: url(back.jpg);
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
+    background-image: url(images/back.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     color: white;
-    overflow-x: hidden; /* empêche le scroll horizontal à cause des animations */
+    overflow-x: hidden;
+    /* empêche le scroll horizontal à cause des animations */
 }
 
-/* --- Header --- */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: black;
-}
+
 
 /* Logo */
 .logo-img {
     height: 100px;
     width: auto;
-}
-
-/* Navigation */
-header nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li {
-    margin-left: 30px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-header nav ul li a:hover,
-header nav ul li a.active {
-    color: #ff6347;
 }
 
 /* --- Section principale / Hero --- */
@@ -73,7 +43,7 @@ header nav ul li a.active {
 .hero-text h1 {
     font-size: 48px;
     margin-bottom: 20px;
-    color: yellow;
+    color: rgb(255, 255, 255);
 }
 
 .hero-text p {
@@ -84,9 +54,9 @@ header nav ul li a.active {
 /* Bouton avec effet hover */
 .hero-text .btn {
     padding: 15px 30px;
-    
-   background-color: #e5533c;
-   color: #ffffff;
+
+    background-color: #e5533c;
+    color: #ffffff;
     text-decoration: none;
     font-size: 18px;
     border-radius: 5px;
@@ -95,21 +65,25 @@ header nav ul li a.active {
 
 .hero-text .btn:hover {
     color: #e5533c;
-    background-color:yellow ;
-    transform: scale(1.05); /* léger zoom au survol */
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.05);
+    /* léger zoom au survol */
 }
 
 /* Container pour les deux images */
 .hero-image {
-    display: flex;          /* images côte à côte */
-    gap: 20px;              /* espace entre les images */
+    display: flex;
+    /* images côte à côte */
+    gap: 20px;
+    /* espace entre les images */
     opacity: 0;
     animation: fadeInRight 1.5s forwards;
 }
 
 /* Images individuelles */
 .hero-images img {
-    width: 250px;           /* taille des images, tu peux ajuster */
+    width: 250px;
+    /* taille des images, tu peux ajuster */
     height: auto;
     border-radius: 10px;
 }
@@ -120,6 +94,7 @@ header nav ul li a.active {
         opacity: 0;
         transform: translateX(-50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -131,6 +106,7 @@ header nav ul li a.active {
         opacity: 0;
         transform: translateX(50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -145,7 +121,8 @@ header nav ul li a.active {
 
 /* Section Ingrédients */
 .ingredients {
-    background-color: #000000; /* sombre */
+    background-color: #000000;
+    /* sombre */
     color: white;
     display: flex;
     flex-direction: column;
@@ -161,11 +138,12 @@ header nav ul li a.active {
     margin-bottom: 15px;
     animation: fadeInDown 1.2s forwards;
 }
+
 .ingredients p {
     font-size: 18px;
     max-width: 700px;
     margin-bottom: 30px;
-    color: yellow;
+    color: rgb(255, 255, 255);
     animation: fadeInUp 1.5s forwards;
 }
 
@@ -182,29 +160,63 @@ header nav ul li a.active {
     width: 350px;
     height: auto;
     border-radius: 15px;
-    transition: transform 0.5s; /* transition douce pour zoom */
+    transition: transform 0.5s;
+    /* transition douce pour zoom */
     animation: pulse 6s infinite;
 }
 
 /* Définir le délai pour chaque image pour qu’elles s’agrandissent à tour de rôle */
-.ingredients-images img:nth-child(1) { animation-delay: 0s; }
-.ingredients-images img:nth-child(2) { animation-delay: 2s; }
-.ingredients-images img:nth-child(3) { animation-delay: 4s; }
+.ingredients-images img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.ingredients-images img:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.ingredients-images img:nth-child(3) {
+    animation-delay: 4s;
+}
 
 /* Animations du texte */
 @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Animation pour images : zoom léger */
 @keyframes pulse {
-    0%, 33%, 100% { transform: scale(1); }
-    16% { transform: scale(1.1); } /* une image devient légèrement plus grande */
+
+    0%,
+    33%,
+    100% {
+        transform: scale(1);
+    }
+
+    16% {
+        transform: scale(1.1);
+    }
+
+    /* une image devient légèrement plus grande */
 }
 
 
@@ -236,7 +248,7 @@ header nav ul li a.active {
 
 .chefs p {
     font-size: 18px;
-    color: yellow;
+    color: rgb(255, 255, 255);
     margin-bottom: 40px;
     animation: fadeInUp 1.5s forwards;
 }
@@ -259,7 +271,8 @@ header nav ul li a.active {
 /* Zoom léger à l'apparition */
 .chef-card img {
     width: 100%;
-    border-radius: 50%; /* cercle par défaut */
+    border-radius: 50%;
+    /* cercle par défaut */
     transition: all 0.4s;
 }
 
@@ -283,8 +296,10 @@ header nav ul li a.active {
 
 /* Survol de la carte */
 .chef-card:hover img {
-    border-radius: 10px; /* rectangle arrondi */
-    transform: scale(1.05); /* léger zoom */
+    border-radius: 10px;
+    /* rectangle arrondi */
+    transform: scale(1.05);
+    /* léger zoom */
 }
 
 .chef-card:hover .social-links {
@@ -304,7 +319,8 @@ header nav ul li a.active {
 
 /* ====== Section Clients ====== */
 .clients {
-    background-color: #000000; /* sombre */
+    background-color: #000000;
+    /* sombre */
     color: white;
     text-align: center;
     padding: 60px 50px;
@@ -312,15 +328,15 @@ header nav ul li a.active {
 
 .clients h2 {
     font-size: 32px;
-    color:#ff6347;
+    color: #ff6347;
     margin-bottom: 15px;
     animation: fadeInDown 1s forwards;
 }
 
 .clients h3 {
-   
-    color:yellow;
-    
+
+    color: rgb(255, 255, 255);
+
 }
 
 
@@ -353,9 +369,17 @@ header nav ul li a.active {
 }
 
 /* Délai pour que les avis apparaissent l’un après l’autre */
-.client-card:nth-child(1) { animation-delay: 0s; }
-.client-card:nth-child(2) { animation-delay: 0.5s; }
-.client-card:nth-child(3) { animation-delay: 1s; }
+.client-card:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.client-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.client-card:nth-child(3) {
+    animation-delay: 1s;
+}
 
 .client-card img {
     width: 100px;
@@ -372,13 +396,27 @@ header nav ul li a.active {
 
 /* Réutilisation des keyframes existants */
 @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
@@ -403,7 +441,7 @@ header nav ul li a.active {
     font-size: 18px;
     max-width: 700px;
     margin: 0 auto 40px auto;
-    color: yellow;
+    color: rgb(255, 255, 255);
 }
 
 /* Formulaire centré */
@@ -435,8 +473,8 @@ header nav ul li a.active {
 }
 
 .contact-form button:hover {
-    background-color: yellow;
-    color: #e5533c;
+    background-color: rgb(231, 186, 142);
+    color: #e19d92;
 }
 
 /* Coordonnées sous le formulaire */
@@ -501,15 +539,18 @@ footer {
 
 
 /* Hero spécial similaire à la page d'accueil */
-.special-hero, .hero {
+.special-hero,
+.hero {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 80px 50px;
     background-color: black;
     color: white;
-    gap: 50px; /* espace entre texte et image */
-    flex-wrap: wrap; /* pour mobile, texte et image se mettent verticalement */
+    gap: 50px;
+    /* espace entre texte et image */
+    flex-wrap: wrap;
+    /* pour mobile, texte et image se mettent verticalement */
 }
 
 /* Texte à gauche avec animation */
@@ -542,11 +583,25 @@ footer {
 
 /* Animations keyframes déjà présentes */
 @keyframes fadeInLeft {
-    from { opacity: 0; transform: translateX(-50px); }
-    to { opacity: 1; transform: translateX(0); }
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes fadeInRight {
-    from { opacity: 0; transform: translateX(50px); }
-    to { opacity: 1; transform: translateX(0); }
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style2.css">
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo1.png" alt="Logo restaurant" width="100PX" height="100PX">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="accueil.html" class="active">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="special.html">Spécial</a></li>
+                <li><a href="Reservation.html">Réservation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ====== Section Contact ====== -->
+    <section class="contact">
+        <h2 style="color: #d4af37; text-align: center;">Contactez-nous</h2>
+        <p>Pour toute réservation ou information, envoyez-nous un message ou utilisez nos coordonnées ci-dessous.</p>
+
+        <!-- Formulaire centré -->
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <input type="text" name="subject" placeholder="Sujet" required>
+            <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <!-- Coordonnées sous le formulaire -->
+        <div class="contact-info">
+            <p><strong>Adresse :</strong> 123 Rue de la Cuisine, Casablanca, Maroc</p>
+            <p><strong>Téléphone :</strong> +212 6 12 34 56 78</p>
+            <p><strong>Email :</strong> contact@lessencedugout.ma</p>
+        </div>
+    </section>
+</body>
+
+</html>
